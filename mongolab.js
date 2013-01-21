@@ -2,7 +2,7 @@
 angular.module('mongolab', ['ngResource']).
   factory('Project', function($resource) {
     var Project = $resource('https://api.mongolab.com/api/1/databases' +
-        '/angular-tests/collections/projects',
+        '/angular-tests/collections/projects/:id',
         { apiKey: '50fd0649e4b06f42abe8795e' }, {
           update: { method: 'PUT' }
         }

@@ -1,13 +1,13 @@
 <form name="myForm">
   <div class="control-group" ng-class="{error: myForm.name.$invalid}">
     <label>Name</label>
-    <input type="text" name="name" ng-model="project.name" required/>
+    <input type="text" name="name" ng-model="project.name" required>
     <span ng-show="myForm.name.$error.required" class="help-inline">Required</span>
   </div>
 
   <div class="control-group" ng-class="{error: myForm.site.$invalid}">
     <label>Website</label>
-    <input type="url" name="site" ng-model="project.site" required/>
+    <input type="url" name="site" ng-model="project.site" required>
     <span ng-show="myForm.site.$error.required" class="help-inline">Required</span>
     <span ng-show="myForm.site.$error.url" class="help-inline">Not a URL</span>
   </div>
