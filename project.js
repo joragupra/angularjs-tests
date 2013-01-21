@@ -26,6 +26,10 @@ function EditCtrl($scope, $location, $routeParams, Project) {
     self.original = project;
     $scope.project = new Project(self.original);
   });
+  
+  $scope.isClean = function() {
+    return angular.equals(self.original, $scope.project);
+  }
 
   $scope.destroy = function() {
     self.original.destroy(function() {
